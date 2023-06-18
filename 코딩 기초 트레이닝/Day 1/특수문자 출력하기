@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+        // 이 문제는 입력이 없다고?
+        System.out.println("!@#$%^&*(\\\'\"<>?:;");
+        
+    }
+}
