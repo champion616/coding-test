@@ -1,0 +1,11 @@
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String answer = "";
+        
+        // 대체될 문자열
+        String target = my_string.substring(s, s + overwrite_string.length());
+        
+        answer = my_string.replace(target, overwrite_string);
+        return answer;
+    }
+}
