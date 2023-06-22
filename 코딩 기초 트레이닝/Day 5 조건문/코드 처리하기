@@ -25,7 +25,7 @@ class Solution {
             }
         }
         
-        return answer;
+        return (answer.equals("")) ? "EMPTY" : answer; // 빈문자열일 때의 조건 추가함
     }
 }
 
