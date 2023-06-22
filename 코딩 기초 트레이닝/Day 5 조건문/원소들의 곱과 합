@@ -1,0 +1,17 @@
+class Solution {
+    public int solution(int[] num_list) {
+        int value1 = 1
+        int value2 = 0;
+        
+        for(int i=0; i<num_list.length; i++){
+            value1 *= num_list[i];
+        }
+        
+        for(int i=0; i<num_list.length; i++){
+            value2 += num_list[i];
+        }
+        value2 = (int)Math.pow(value2, 2);
+        
+        return (value1 < value2) ? 1 : 0;
+    }
+}
