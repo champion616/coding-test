@@ -7,19 +7,18 @@ class Solution {
         for(int i=1; i<numLog.length; i++){
             if(numLog[i] == (n + 1)){
                 answer += "w";
-                n = numLog[i];
             } else if(numLog[i] == (n - 1)){
                 answer += "s";
-                n = numLog[i];
             } else if(numLog[i] == (n + 10)){
                 answer += "d";
-                n = numLog[i];
             } else if(numLog[i] == (n - 10)){
                 answer += "a";
-                n = numLog[i];
             }
+            n = numLog[i];
         }
         
         return answer;
     }
 }
+
+// 약소하지만 중복 제거함
