@@ -22,3 +22,34 @@ class Solution {
         return answer;
     }
 }
+
+// 2차 시도
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = new int[queries.length];
+        
+        for(int j=0; j<queries.length; j++){
+            int s = queries[j][0];
+            int e = queries[j][1];
+            int k = queries[j][2];
+            
+            int temp = -1;
+            
+            for(int i=s; i<=e; i++){
+                
+                if(arr[i] > k){
+                    if(temp != -1){
+                        if(arr[i] > temp){
+                            continue;
+                        }
+                    }
+                    temp = arr[i];
+                }
+                
+            }
+            answer[j] = temp;
+        }
+        
+        return answer;
+    }
+}
