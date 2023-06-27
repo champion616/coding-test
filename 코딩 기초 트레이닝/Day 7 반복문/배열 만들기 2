@@ -1,0 +1,35 @@
+import java.util.*;
+import java.util.ArrayList;
+
+class Solution {
+    public int[] solution(int l, int r) {
+        int[] answer = {};
+        
+        List<Integer> list = new ArrayList<>();
+        
+        for(int i=l; i<=r; i++){
+            String str = i + "";
+            int count = 0;
+            
+            for(int j=0; j<str.length(); j++){
+                if(str.charAt(j)==48 || str.charAt(j)==53){ // str이 "0" 또는 "5"로만 이루어진 경우
+                    count++;
+                }
+            }
+            if(count == str.length()){ // count와 str.length()의 값이 일치하는 경우
+                list.add(i);
+            }
+        }
+        
+        if(list.size() == 0){
+            answer = new int[]{-1};
+        }else{
+            answer = new int[list.size()];
+            for(int i=0; i<list.size(); i++){
+                answer[i] = list.get(i).intValue();
+            }
+        }
+        
+        return answer;
+    }
+}
