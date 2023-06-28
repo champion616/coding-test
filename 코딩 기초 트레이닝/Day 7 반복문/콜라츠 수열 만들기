@@ -1,0 +1,39 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class Solution {
+    public int[] solution(int n) {
+        int[] answer = {};
+        
+        List<Integer> list = new ArrayList<>();
+        list.add(n);
+        
+        while(list.get(list.size()-1) != 1){
+            int num = list.get(list.size()-1);
+            
+            if(num % 2 == 0){
+                list.add(num/2);
+            }else{
+                list.add(3*num+1);
+            }
+        }
+        
+        answer = new int[list.size()];
+        for(int i=0; i<list.size(); i++){
+            answer[i] = list.get(i);   
+        }
+        
+        return answer;
+    }
+}
+
+/*
+0. n을 answer[0]에 저장한다.
+1. n의 홀수 여부를 확인한다.
+    - 짝수이면 2로 나눈다.
+    - 홀수이면 3 * n + 1 한다.
+2. 결과를 answer[1]에 저장한다.
+3. 결과가 1인지 확인한다.
+    - 1이면 반복문을 빠져나온다.
+    - 1이 아니면 1번부터 반복한다.
+*/
