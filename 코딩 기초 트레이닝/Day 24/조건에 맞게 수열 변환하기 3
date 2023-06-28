@@ -1,0 +1,24 @@
+class Solution {
+    public int[] solution(int[] arr, int k) {
+        int[] answer = arr;
+        
+        if(k % 2 != 0){
+            for(int i=0; i<answer.length; i++){
+                answer[i] *= k;
+            }
+        }else{
+            for(int i=0; i<answer.length; i++){
+                answer[i] += k;
+            }
+        }
+        
+        return answer;
+    }
+}
+/*
+- arr.length만큼 반복
+
+1. k의 홀수 여부를 확인
+    - 홀수라면 arr의 모든 원소에 k를 곱함
+    - 짝수라면 arr의 모든 원소에 k를 더함
+*/
