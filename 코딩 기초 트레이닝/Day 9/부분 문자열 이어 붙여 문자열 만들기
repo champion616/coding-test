@@ -1,0 +1,22 @@
+class Solution {
+    public String solution(String[] my_strings, int[][] parts) {
+        String answer = "";
+        
+        for(int i=0; i<my_strings.length; i++){
+            int s = parts[i][0];
+            int e = parts[i][1] + 1;
+            
+            answer += my_strings[i].substring(s,e);
+        }
+        
+        return answer;
+    }
+}
+/*
+- my_strings 배열과 parts 배열의 길이가 같음
+- parts[i]는 [s,e] 형태, my_string[i]의 인덱스 s~e까지의 부분 문자열을 의미함
+- 해당되는 부문 문자열을 순서대로 이어 return하기
+
+1. my_strings 배열의 길이만큼 반복한다.
+2. my_strings[i]의 부분 문자열을 구하고, answer에 누적합한다.
+*/
