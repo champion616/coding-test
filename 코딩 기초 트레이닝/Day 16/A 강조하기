@@ -1,0 +1,15 @@
+class Solution {
+    public String solution(String myString) {
+        String answer = "";
+        String ms = myString.toLowerCase();
+        
+        for(int i=0; i<ms.length(); i++){
+            if('a' == ms.charAt(i)){
+                answer += 'A';
+            }else{
+                answer += ms.charAt(i);
+            }
+        }
+        return answer;
+    }
+}
