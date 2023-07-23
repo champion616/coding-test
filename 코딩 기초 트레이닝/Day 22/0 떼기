@@ -1,0 +1,19 @@
+class Solution {
+    public String solution(String n_str) {
+        String answer = "";
+        
+        int cnt = 0;
+        for(int i=0; i<n_str.length(); i++){
+            if(n_str.charAt(i) == '0'){
+                cnt++;
+            }else{
+                for(int j=0; j<n_str.length()-cnt; j++){
+                    answer += n_str.charAt(i+j);
+                }
+                break;
+            }
+            
+        }
+        return answer;
+    }
+}
