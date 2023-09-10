@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        
+        for(int i=0; i<my_string.length(); i++){
+            char ch = my_string.charAt(i);
+            
+            if('A'<=ch && ch<='Z'){
+                answer += (ch+"").toLowerCase();
+            }else if('a'<=ch && ch<='z'){
+                answer += (ch+"").toUpperCase();
+            }
+        }
+        return answer;
+    }
+}
