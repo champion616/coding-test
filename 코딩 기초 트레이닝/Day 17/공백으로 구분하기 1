@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+class Solution {
+    public String[] solution(String my_string) {
+        String[] answer = {};
+        
+        ArrayList<String> list = new ArrayList<>();
+        
+        String word = "";
+        
+        for(int i=0; i<my_string.length(); i++){
+            char ch = my_string.charAt(i);
+            
+            if(ch != ' ' && i != my_string.length()-1){
+                word += ch;
+            }else if(ch == ' '){
+                list.add(word);
+                word = "";
+            }else if(i == my_string.length()-1){
+                word += ch;
+                list.add(word);
+            }
+        }
+        
+        answer = new String[list.size()];
+        
+        for(int i=0; i<answer.length; i++){
+            answer[i] = list.get(i);
+        }
+        
+        return answer;
+    }
+}
