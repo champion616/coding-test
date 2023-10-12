@@ -5,12 +5,14 @@ class Solution {
         int answer = 0;
         
         BigInteger bigNumber = new BigInteger(num_str);
+        BigInteger zero = new BigInteger("0");
+        BigInteger ten = new BigInteger("10");
         
-        while(bigNumber.compareTo("0") != -1){
-            int num = bigNumber.reminder("10").intValue();
+        while(bigNumber.compareTo(zero) != 0){
+            int num = bigNumber.remainder(ten).intValue();
             answer += num;
             
-            bigNumber = bigNumber.divide("10");
+            bigNumber = bigNumber.divide(ten);
         }
         
         return answer;
