@@ -1,0 +1,18 @@
+import java.math.BigInteger;
+
+class Solution {
+    public int solution(String num_str) {
+        int answer = 0;
+        
+        BigInteger bigNumber = new BigInteger(num_str);
+        
+        while(bigNumber.compareTo("0") != -1){
+            int num = bigNumber.reminder("10").intValue();
+            answer += num;
+            
+            bigNumber = bigNumber.divide("10");
+        }
+        
+        return answer;
+    }
+}
