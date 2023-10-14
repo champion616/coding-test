@@ -2,20 +2,13 @@ class Solution {
     public int solution(String[] order) {
         int answer = 0;
         
-        int americano = 0;
-        int cafelatte = 0;
-        
-        for(int i=0; i<order.length; i++){
-            String menu = order[i];
-            
+        for(String menu : order){
             if(menu.contains("cafelatte")){
-                cafelatte += 5000;
+                answer += 5000;
             }else{
-                americano += 4500;
+                answer += 4500;
             }
         }
-              
-        answer = americano + cafelatte;
                
         return answer;
     }
