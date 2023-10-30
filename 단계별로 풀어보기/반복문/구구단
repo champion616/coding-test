@@ -6,7 +6,7 @@ public class Main{
         
         int n = sc.nextInt();
         
-        for(int x=1; x<=9; n++){
+        for(int x=1; x<=9; x++){
             System.out.printf("%d * %d = %d\n", n, x, (n*x));
         }
     }
