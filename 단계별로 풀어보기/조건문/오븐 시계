@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int c = sc.nextInt();
+        
+        int tempH = c / 60;
+        int tempM = c % 60;
+        
+        h += tempH;
+        
+        if(m + tempM < 60){
+            m += tempM;
+        }else if(m + tempM == 60){
+            m = 0;
+            h += 1;
+        }else{
+            m = m + tempM - 60;
+            h += 1;
+        }
+        
+        if(h > 23){
+            h -= 24;
+        }
+        
+        System.out.printf("%d %d", h, m);
+    }
+}
